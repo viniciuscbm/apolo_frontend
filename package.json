@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.1.10",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
@@ -17,7 +18,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint . --fix",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=g00nswu35ie"
   },
   "eslintConfig": {
     "extends": [
@@ -38,8 +42,19 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "@storybook/addon-a11y": "^6.1.4",
+    "@storybook/addon-actions": "^6.1.4",
+    "@storybook/addon-essentials": "^6.1.4",
+    "@storybook/addon-links": "^6.1.4",
+    "@storybook/addon-storyshots": "^6.1.2",
+    "@storybook/node-logger": "^6.1.4",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.4",
     "@testing-library/react-hooks": "^3.4.2",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "8.1.0",
+    "chromatic": "^5.4.0",
     "eslint": "^7.14.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
@@ -50,6 +65,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^5.0.4",
     "lint-staged": "^10.5.1",
-    "prettier": "^2.2.0"
+    "prettier": "^2.2.0",
+    "react-test-renderer": "^17.0.1"
   }
 }

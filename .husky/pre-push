@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname $0)/_/husky.sh"
 
-yarn test --watchAll=false --coverage
+docker-compose run --rm web yarn test --watchAll=false --coverage

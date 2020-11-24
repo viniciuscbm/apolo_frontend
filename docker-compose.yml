@@ -11,5 +11,16 @@ services:
       - node_modules:/node_modules
     ports:
       - 3000:3000
+
+  storybook:
+    image: apolo_frontend_web:latest
+    command: yarn storybook
+    stdin_open: true
+    tty: true
+    volumes:
+      - '.:/app'
+      - node_modules:/node_modules
+    ports:
+      - 6006:6006
 volumes:
   node_modules:
